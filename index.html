@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Archon AI Developer Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --bg: #0a0f1c;
+      --card: #11182a;
+      --accent: #5eead4;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2933;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* NAVBAR */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(10, 15, 28, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 20px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    /* HERO */
+    .hero {
+      padding: 120px 40px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #5eead4, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #020617;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .cta:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(94, 234, 212, 0.4);
+    }
+
+    /* SECTIONS */
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 40px;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* API BLOCK */
+    .code {
+      background: #020617;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      font-family: monospace;
+      color: #5eead4;
+      overflow-x: auto;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 80px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .nav {
+        padding: 16px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="nav">
+    <div class="logo">ARCHON AI</div>
+    <div class="nav-links">
+      <a href="#platform">Platform</a>
+      <a href="#docs">Docs</a>
+      <a href="#api">API</a>
+      <a href="#community">Community</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Build the Future with Archon AI</h1>
+    <p>
+      Powerful APIs, intelligent infrastructure, and developer-first tools
+      to build next-generation AI applications.
+    </p>
+    <a href="#docs" class="cta">Get Started</a>
+  </section>
+
+  <!-- PLATFORM -->
+  <section class="section" id="platform">
+    <h2>Platform</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>⚡ AI Compute</h3>
+        <p>High-performance inference and training infrastructure designed for modern AI workloads.</p>
+      </div>
+      <div class="card">
+        <h3>🔐 Secure APIs</h3>
+        <p>Token-based authentication and enterprise-grade security built into every request.</p>
+      </div>
+      <div class="card">
+        <h3>📊 Analytics</h3>
+        <p>Real-time metrics, logs, and usage dashboards for complete system observability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCS -->
+  <section class="section" id="docs">
+    <h2>Developer Docs</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🚀 Quickstart</h3>
+        <p>Spin up your first AI app in under 5 minutes with our SDKs and CLI tools.</p>
+      </div>
+      <div class="card">
+        <h3>📚 Guides</h3>
+        <p>Deep dives into model deployment, scaling, and optimization techniques.</p>
+      </div>
+      <div class="card">
+        <h3>🧠 Models</h3>
+        <p>Access foundation models and fine-tuned AI systems for vision, text, and code.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- API -->
+  <section class="section" id="api">
+    <h2>API Example</h2>
+    <div class="code">
+curl -X POST https://api.archon.ai/v1/generate \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "archon-large",
+    "prompt": "Hello, world!"
+  }'
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section class="section" id="community">
+    <h2>Community</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>💬 Discord</h3>
+        <p>Join developers, founders, and AI engineers building on Archon AI.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 Open Source</h3>
+        <p>Contribute to SDKs, tools, and platform integrations on GitHub.</p>
+      </div>
+      <div class="card">
+        <h3>🎓 Learn</h3>
+        <p>Tutorials, workshops, and community-led training programs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Archon AI · Developer Platform · Built by Kira
+  </footer>
+
+</body>
+</html>
